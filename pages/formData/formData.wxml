@@ -1,0 +1,30 @@
+<view class="content">
+  <form bindsubmit="submitStudentInfo" bindreset="resetStudent">
+    <text class="student">学员信息登记表</text>
+    <view class="studentInfo">
+      <view class="name">姓名：</view>
+      <input name="studentName" class="inputStudentName" bindinput="inputValue" placeholder="请输入姓名" auto-focus/>
+      <view class="sex">性别：</view>
+      <radio-group class="radio-group" wx:for="{{sexs}}">
+        <label class="radio"><radio name="sexName">{{item.sexsName}}</radio></label>
+      </radio-group>
+      <view class="selectCourse">所选课程：</view>
+      <checkbox-group wx:for="{{courses}}">
+         <label><checkbox name="coursesName">{{item.courses}}</checkbox></label>
+      </checkbox-group>
+      <button data-studentname="{{inputValue}}" data-studentsex="{{radioValue}}" data-selectcourse="{{coursesName}}" class="btnStudentInfo" bindtap="btnStudentInfo" form-type="submit" type="primary">学员信息提交</button>
+      <button class="btnStudentInfo" bindtap="btnStudentReset" form-type="reset" type="default">学员信息重置</button>
+    </view>
+  </form>
+</view>
+
+
+<!--通过提交并显示学员信息-->
+<view class="showStudentInfo">
+  <text class="student">学员信息显示</text>
+  <view class="studentInfo">
+    <view class="studentName">姓名：{{studentInfo.studentName}}</view>
+    <view class="studentName">性别：</view>
+    <view class="studentName">所选课程：</view>
+  </view>
+</view>

@@ -1,0 +1,9 @@
+<view class="barnner">
+  <swiper indicator-dots="true" autoplay="true" interval="3000" duration="1000">
+    <block wx:for="{{imgUrl}}" wx:for="{{bg}}">
+        <swiper-item>
+            <image src="{{item}}" class="slide-image" class="{{item}}"></image>
+        </swiper-item>
+    </block>
+  </swiper>
+</view>

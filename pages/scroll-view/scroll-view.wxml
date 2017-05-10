@@ -1,0 +1,13 @@
+<view class="container">
+  <!--scroll-view 导航-->
+  <scroll-view class="nav" scroll-x="true">
+    <view class="nav-title" wx:for="{{courseItem}}">{{item}}</view>
+  </scroll-view>
+  <!--scroll-view 图片滚动 但是一般使用swiper-->
+  <scroll-view class="carousel" scroll-x="true">
+    <view class="carousel-img bc_green">sss</view>
+    <view class="carousel-img bc_red">sss</view>
+    <view class="carousel-img bc_yellow">ss</view>
+    <view class="carousel-img bc_blue">ss</view>
+  </scroll-view>
+</view>

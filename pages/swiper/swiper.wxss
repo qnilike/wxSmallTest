@@ -1,0 +1,13 @@
+.slide-image{
+    width: 100%;
+    height: 100%;
+}
+.bc_green{
+    background: green;
+}
+.bc_red{
+    background: red;
+}
+.bc_yellow{
+    background: yellow;
+}
